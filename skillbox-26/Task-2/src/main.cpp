@@ -110,10 +110,6 @@ class Phone{
             }
         }
     }
-
-    void exit(){
-        abort();
-    }
 };
 
 int main(){
@@ -125,7 +121,7 @@ int main(){
         if (command == "add") phone.add();
         else if (command == "call") phone.call();
         else if (command == "sms") phone.sms();
-        else if (command == "exit") phone.exit();
+        else if (command == "exit") exit(0);
         else std::cout << "Wrong input!\n";
     }   
     return 0;

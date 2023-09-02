@@ -95,10 +95,6 @@ class Walkman{
             std::cout << "Stopping playing track " << currentTrack.getName() << std::endl;
         }
     }
-
-    void exit(){
-        abort();
-    }
 };
 
 int main(){
@@ -112,7 +108,7 @@ int main(){
         else if (command == "pause") test.pause();
         else if (command == "next") test.next();
         else if (command == "stop") test.stop();
-        else if (command == "exit") test.exit();
+        else if (command == "exit") exit(0);
         else std::cout << "Unknown command!\n";
     }
     return 0;
