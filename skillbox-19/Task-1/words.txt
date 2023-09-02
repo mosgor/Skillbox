@@ -1,0 +1,6 @@
+cat dog
+cheese
+cat
+bird dog
+programming
+food 
