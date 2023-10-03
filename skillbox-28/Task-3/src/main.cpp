@@ -16,6 +16,7 @@ void giveOrder(){
     std::vector<std::string> possibleFood = {"pizza", "soup", "steak", "salad", "sushi"};
     int givedOrders = 0;
     while(givedOrders != 10)
+    //for(int i = 0; i < 10; i++)
     {
         mute.lock();
         std::string temp = possibleFood[std::rand() % 5];
@@ -30,6 +31,7 @@ void giveOrder(){
 void makeOrder(){
     int madeOrders = 0;
     while (madeOrders != 10)
+    //for(int i = 0; i < 10; i++)
     {
         if (orders.size() == 0) continue;
         mute.lock();
@@ -49,6 +51,7 @@ void makeOrder(){
 void deliverOrder(){
     int deliveredOrders = 0;
     while(deliveredOrders != 10)
+    //for(int i = 0; i < 10; i++)
     {
         if (readyOrders.size() == 0) continue;
         mute.lock();
