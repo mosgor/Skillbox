@@ -15,5 +15,16 @@ int main(){
     b.show();
     std::cout << "\n";
     c.show();
+    std::vector<int> abc;
+    c.getPrevVertices(5, abc);
+    for (int x : abc){
+        std::cout << x << " ";
+    }
+    std::cout << "\n";
+    abc.clear();
+    c.getNextVertices(5, abc);
+    for (int x : abc){
+        std::cout << x << " ";
+    }
     return 0;
 }
