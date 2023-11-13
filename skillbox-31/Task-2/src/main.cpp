@@ -1,5 +1,4 @@
 #include <iostream>
-#include <memory>
 #include <map>
 
 class Toy {   
@@ -37,12 +36,16 @@ public:
         return *this;
     }
 
-    shared_ptr_toy(shared_ptr_toy* otherPtr){
-        if (otherPtr->object != object){
+    bool operator==(const shared_ptr_toy& otherPtr){
+        return object == otherPtr.object;       
+    }
+
+    shared_ptr_toy(shared_ptr_toy& otherPtr){
+        if (otherPtr.object != object){
             toys[object] -= 1;
-            object = otherPtr->object;
+            object = otherPtr.object;
         }
-        toys[otherPtr->object] += 1;
+        toys[otherPtr.object] += 1;
     }
 
     int use_count(){
@@ -53,21 +56,25 @@ public:
         return object;
     }
 
-    ~shared_ptr_toy(){
+    void reset(){
         toys[object]--;
         if (toys[object] == 0){
             delete object;
             object = nullptr;
         }
     }
+
+    ~shared_ptr_toy(){
+        this->reset();
+    }
 };
 
 std::map<Toy*, int> shared_ptr_toy::toys;
 
 class Dog {
-    std::shared_ptr<Toy> dogsToy = nullptr;
+    shared_ptr_toy dogsToy = nullptr;
 public:
-    void getToy(std::shared_ptr<Toy> otherToy){
+    void getToy(shared_ptr_toy otherToy){
         if (otherToy == dogsToy) std::cout << "I already have this toy.\n";
         else if (otherToy.use_count() != 2) std::cout << "Another dog is playing with this toy.\n";
         else dogsToy = otherToy;
@@ -89,32 +96,15 @@ shared_ptr_toy make_shared_toy(shared_ptr_toy someToy){
 }
 
 int main(){
-    // Dog dogy1;
-    // Dog dogy2;
-    // std::shared_ptr<Toy> ball = std::make_shared<Toy> ("ball");
-    // std::shared_ptr<Toy> bone = std::make_shared<Toy> ("bone");
-
-    // std::shared_ptr<Toy> bab = std::make_shared<Toy> ("test");
-    // std::shared_ptr<Toy> bab2 = bab;
-    // std::shared_ptr<Toy> bab1 = bab;
-    // std::cout << bab.use_count() << std::endl;
-    // std::cout << bab1.use_count() << std::endl;
-    // std::cout << bab2.use_count() << std::endl;
-    // bab1.reset();
-    // std::cout << bab2.use_count() << std::endl;
-
-    shared_ptr_toy bb = make_shared_toy("test");
-    shared_ptr_toy bb2(bb);
-    shared_ptr_toy bb1 = bb;
-    std::cout << bb.use_count() << std::endl;
-    std::cout << bb1.use_count() << std::endl;
-    std::cout << bb2.use_count() << std::endl;
-
-    // dogy1.dropToy();
-    // dogy2.getToy(ball);
-    // dogy1.getToy(ball);
-    // dogy2.getToy(bone);
-    // dogy1.getToy(ball);
-    // dogy2.dropToy();
+    Dog dogy1;
+    Dog dogy2;
+    shared_ptr_toy ball = make_shared_toy("ball");
+    shared_ptr_toy bone = make_shared_toy("bone");
+    dogy1.dropToy();
+    dogy2.getToy(ball);
+    dogy1.getToy(ball);
+    dogy2.getToy(bone);
+    dogy1.getToy(ball);
+    dogy2.dropToy();
     return 0;
 }
