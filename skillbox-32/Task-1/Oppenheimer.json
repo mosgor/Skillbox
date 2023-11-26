@@ -1,0 +1,25 @@
+{
+    "Country": [
+        "United States",
+        "United Kingdom"
+    ],
+    "Director": "Christopher Nolan",
+    "Producers": [
+        "Emma Thomas",
+        "Charles Roven",
+        "Christopher Nolan"
+    ],
+    "Production companies": [
+        "Syncopy Inc.",
+        "Atlas Entertainment"
+    ],
+    "Stars": {
+        "Lewis Strauss": "Robert Downey Jr.",
+        "Oppenheimer": "Cillian Murphy"
+    },
+    "Writers": [
+        "Christopher Nolan",
+        "Kai Bird",
+        "Martin Sherwin"
+    ]
+}

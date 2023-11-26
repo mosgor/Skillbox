@@ -1,0 +1,124 @@
+{
+    "Inception": {
+        "Country": [
+            "United States",
+            "United Kingdom"
+        ],
+        "Director": "Christopher Nolan",
+        "Producers": [
+            "Emma Thomas",
+            "Christopher Nolan"
+        ],
+        "Production company": [
+            "Syncopy Inc.",
+            "Warner Bros. Pictures",
+            "Legendary Pictures"
+        ],
+        "Stars": {
+            "Cillian Murphy": "Robert Fischer",
+            "Leonardo DiCaprio": "Cobb"
+        },
+        "Writers": "Christopher Nolan"
+    },
+    "Oppenheimer": {
+        "Country": [
+            "United States",
+            "United Kingdom"
+        ],
+        "Director": "Christopher Nolan",
+        "Producers": [
+            "Emma Thomas",
+            "Charles Roven",
+            "Christopher Nolan"
+        ],
+        "Production company": [
+            "Syncopy Inc.",
+            "Atlas Entertainment"
+        ],
+        "Stars": {
+            "Cillian Murphy": "R. Oppenheimer",
+            "Robert Downey Jr.": "Lewis Strauss"
+        },
+        "Writers": [
+            "Christopher Nolan",
+            "Kai Bird",
+            "Martin Sherwin"
+        ]
+    },
+    "Sherlock Holmes (2019)": {
+        "Country": [
+            "United States",
+            "Germany",
+            "United Kingdom",
+            "Australia"
+        ],
+        "Director": "Guy Ritchie",
+        "Producers": [
+            "Joel Silver",
+            "Lionel Wigram",
+            "Susan Downey",
+            "Dan Lin"
+        ],
+        "Production company": [
+            "Silver Pictures",
+            "Wigram Productions",
+            "Village Roadshow Pictures"
+        ],
+        "Stars": {
+            "Eddie Marsan": "Inspector Lestrade",
+            "Robert Downey Jr.": "Sherlock Holmes"
+        },
+        "Writers": [
+            "Michael Robert Johnson",
+            "Anthony Peckham",
+            "Simon Kinberg"
+        ]
+    },
+    "The Gentlemen": {
+        "Country": [
+            "United States",
+            "United Kingdom"
+        ],
+        "Director": "Guy Ritchie",
+        "Producers": [
+            "Guy Ritchie",
+            "Ivan Atkinson",
+            "Bill Block"
+        ],
+        "Production company": "Miramax",
+        "Stars": {
+            "Eddie Marsan": "Big Dave",
+            "Matthew McConaughey": "Michael Pearson"
+        },
+        "Writers": [
+            "Guy Ritchie",
+            "Ivan Atkinson",
+            "Marn Davies"
+        ]
+    },
+    "The Wolf of Wall Street": {
+        "Country": "United States",
+        "Director": "Martin Scorsese",
+        "Producers": [
+            "Martin Scorsese",
+            "Leonardo DiCaprio",
+            "Riza Aziz",
+            "Joey McFarland",
+            "Emma Tillinger Koskoff"
+        ],
+        "Production company": [
+            "Red Granite Pictures",
+            "Appian Way Productions",
+            "Sikelia Productions",
+            "EMJAG Productions"
+        ],
+        "Stars": {
+            "Leonardo DiCaprio": "Jordan Belfort",
+            "Matthew McConaughey": "Mark Hanna"
+        },
+        "Writers": [
+            "Terence Winter",
+            "Jordan Belfort"
+        ]
+    }
+}
